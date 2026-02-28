@@ -82,19 +82,14 @@
 
 @media screen and (min-width: 768px) {
   .git {
-    &__wrapper {
-      margin-top: 45px;
-    }
-    &__input {
+    &__form {
+      position: relative;
       width: 300px;
+      padding-left: 24px;
     }
-    &__textarea {
-      width: 300px;
-    }
+
     &__decor {
       display: block;
-      width: 85px;
-      height: 85px;
       position: absolute;
       bottom: 0;
       right: 0;
@@ -135,6 +130,23 @@
     &__img {
       width: 573px;
       height: 356px;
+    }
+    &__form {
+      width: auto;
+      padding-left: 127px;
+    }
+    &__fieldset {
+      display: flex;
+      column-gap: 45px;
+    }
+    &__label,
+    &__check-block,
+    &__input,
+    &__textarea {
+      width: 300px;
+    }
+    &__decor {
+      right: 75px;
     }
   }
 }
