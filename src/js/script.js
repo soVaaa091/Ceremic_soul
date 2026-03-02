@@ -1,14 +1,41 @@
-import "purecss/build/grids-min.css";
-import "purecss/build/grids-responsive-min.css";
-import "/src/sass/style.scss";
-
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
+
+import "purecss/build/grids-min.css";
+import "purecss/build/grids-responsive-min.css";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "/src/sass/style.scss";
 
-const swiper = new Swiper(".swiper", {
-  modules: [Navigation, Pagination],
-});
+try {
+  new Swiper(".works__slider", {
+    slidesPerView: 1,
+    loop: true,
+    lidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".icon-right-open",
+      prevEl: ".icon-left-open",
+    },
+    // Responsive breakpoints
+    breakpoints: {
+      // when window width is >= 1200px
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 5,
+      },
+      1920: {
+        slidesPerView: 3,
+        spaceBetween: 35,
+      },
+    },
+
+    modules: [Navigation, Pagination],
+  });
+} catch (e) {}
