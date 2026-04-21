@@ -1,0 +1,149 @@
+@use "/src/sass/base/variables.scss" as *;
+.footer {
+  margin-top: 95px;
+  background-color: $dark;
+  &__wrapper {
+    padding-top: 10px;
+  }
+  &__text-h3 {
+    text-align: start;
+  }
+  &__text {
+    text-align: start;
+    color: $Light;
+    margin-top: 40px;
+  }
+  &__fieldset {
+    display: block;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__input {
+    margin-top: 40px;
+    width: 293px;
+    height: 17px;
+    padding: 0 15px 0 0;
+    background-color: transparent;
+    border: none;
+    &::placeholder {
+      color: $ui-disabled;
+      font-size: 14px;
+      font-family: Barlow;
+      font-weight: 400;
+    }
+  }
+  &__line {
+    width: 293px;
+    height: 1px;
+    background: $ui-active;
+    margin: 15px 0 0 0;
+  }
+  &__label {
+    color: $Light;
+  }
+  &__check-block {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 28px;
+
+    a {
+      color: #a22dc6;
+      text-decoration: none;
+      margin-left: 2px;
+    }
+  }
+  &__checkbox {
+    margin-right: 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    border: 1px solid $Light;
+  }
+  &__btn {
+    margin-top: 20px;
+  }
+  &__bloks {
+    margin-top: 40px;
+    display: flex;
+    column-gap: 66px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+  }
+  &__nav {
+    margin-top: 40px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      padding: 0;
+      list-style-type: none;
+    }
+  }
+
+  &__link {
+    color: $Light;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: none;
+  }
+  &__social {
+    margin-top: 40px;
+  }
+  &__social-blok {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      column-gap: 5px;
+      padding: 0;
+      list-style-type: none;
+      a {
+        display: block;
+        color: $Light;
+        text-decoration: none;
+        margin: 0;
+        font-size: 24px;
+      }
+    }
+  }
+  &__copyright {
+    padding: 40px 0 50px 0;
+    text-align: center;
+    color: $Light;
+    font-size: 14px;
+    line-height: normal;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    &__social {
+      display: block;
+      position: absolute;
+      right: 24px;
+      top: 308px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__social {
+      display: block;
+      position: relative;
+      right: 0;
+      top: 0;
+    }
+  }
+}

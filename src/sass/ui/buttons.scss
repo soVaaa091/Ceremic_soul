@@ -19,6 +19,22 @@
     color: $Ceramic;
   }
 }
+.btn-submit {
+  @include button;
+  width: 90px;
+  height: 40px;
+  border-radius: 2px;
+  border: 1px solid $Light;
+  color: $Light;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  &:disabled {
+    border: 1px solid $ui-disabled;
+    color: $ui-disabled;
+  }
+}
 
 @media screen and (min-width: 1200px) {
   .btn-default {
