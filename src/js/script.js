@@ -7,6 +7,7 @@ import "purecss/build/grids-responsive-min.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import "/src/sass/style.scss";
 
 const burger = document.querySelector(".burger"),
