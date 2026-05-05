@@ -34,15 +34,11 @@
       bottom: -1px;
     }
   }
-  &catalog__content-item {
-    display: flex;
-    flex-direction: column;
-    row-gap: 20px;
-  }
+
   &__content {
     margin-top: 60px;
 
-    &__content-item {
+    &-item {
       display: flex;
       flex-direction: column;
       row-gap: 20px;
