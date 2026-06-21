@@ -36,6 +36,28 @@
   }
 }
 
+.btn-read {
+  @include button;
+  width: 145px;
+  height: 32px;
+  border-radius: 2px;
+  border: 1px solid $dark;
+  color: $dark;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+  &:hover {
+    color: $Ceramic;
+    border: 1px solid $Ceramic;
+  }
+  &:focus {
+    color: $dark;
+    border: 1px solid $Ceramic;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .btn-default {
     &:hover {
@@ -62,6 +84,18 @@
     &:disabled {
       color: $ui-disabled;
       border: 1px solid $ui-disabled;
+    }
+  }
+  .btn-read {
+    &:hover {
+      border: 1px solid $Ceramic;
+      color: $Ceramic;
+    }
+    &:active,
+    :focus {
+      // outline: 1px solid $Ceramic;
+      border: 1px solid $Ceramic;
+      color: $dark;
     }
   }
 }

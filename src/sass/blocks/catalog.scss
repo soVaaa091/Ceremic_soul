@@ -1,7 +1,7 @@
 @use "/src/sass/base/variables.scss" as *;
 
 .catalog {
-  padding-top: 50px;
+  padding-top: 60px;
   &__title {
     margin-top: 60px;
   }
@@ -74,8 +74,15 @@
       width: 460px;
     }
     &__content {
-      margin-top: 70px;
+      padding: 10px;
       position: relative;
+      &-item {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
       &::after {
         content: "";
         position: absolute;
@@ -97,7 +104,45 @@
     }
     &__card {
       width: 340px;
-      column-gap: 20px;
+      min-height: 275px;
+      &-img {
+        height: 198px;
+        object-fit: cover;
+      }
+      &-price {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .catalog {
+    &__content {
+      padding: 25px;
+      &-item {
+        gap: 35px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .catalog {
+    padding-top: 100px;
+    &__card {
+      width: 285px;
+      min-height: 250px;
+      &-img {
+        height: 180px;
+        object-fit: cover;
+      }
+    }
+    &__content {
+      padding: 25px;
+      &-item {
+        gap: 25px 83px;
+      }
     }
   }
 }
